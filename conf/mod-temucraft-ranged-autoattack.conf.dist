@@ -1,0 +1,96 @@
+#
+# Copyright (C) 2016+ AzerothCore <www.azerothcore.org>, released under GNU AGPL v3 license: https://github.com/azerothcore/azerothcore-wotlk/blob/master/LICENSE-AGPL3
+#
+
+[worldserver]
+
+########################################
+# Ranged Auto-Attack - the hunter's right-click Auto Shot for every class
+########################################
+#
+#    RangedAutoAttack.Enable
+#        Description: Turn the module on or off.
+#        Default:     1 - Enabled
+#                     0 - Disabled
+#
+
+RangedAutoAttack.Enable = 1
+
+#
+#    RangedAutoAttack.Announce
+#        Description: Tell players about the module and the .rangedauto command when they log in.
+#        Default:     1 - Enabled
+#                     0 - Disabled
+#
+
+RangedAutoAttack.Announce = 1
+
+#
+#    RangedAutoAttack.RightClick
+#        Description: Default for new characters (each player can change it with .rangedauto rightclick).
+#                     Right-clicking a target that is out of melee range starts the ranged auto-attack for the
+#                     equipped wand, thrown weapon, bow, gun or crossbow, as it does for hunters.
+#        Default:     1 - Enabled
+#                     0 - Disabled (players start it from the spellbook or action bar)
+#
+
+RangedAutoAttack.RightClick = 1
+
+#
+#    RangedAutoAttack.CloseRange.Melee
+#        Description: Default for new characters (each player can change it with .rangedauto melee).
+#                     With no minimum range, a ranged auto-attack keeps firing in melee range. When this is on,
+#                     the player switches to melee while the target is in melee range and back to the ranged
+#                     auto-attack when it leaves.
+#        Default:     1 - Switch to melee in melee range
+#                     0 - Keep shooting
+#
+
+RangedAutoAttack.CloseRange.Melee = 1
+
+#
+#    RangedAutoAttack.NoAmmo
+#        Description: Give every player "Requires No Ammo" (46699): bows, guns and crossbows shoot without
+#                     arrows or bullets. The core then takes ammo out of the ammo slot, so its damage bonus is lost.
+#        Default:     1 - Enabled
+#                     0 - Disabled (ammo works as normal)
+#
+
+RangedAutoAttack.NoAmmo = 1
+
+#
+#    RangedAutoAttack.Bots
+#        Description: Run the right-click and close-range logic for playerbots too. Leave it off: the bots'
+#                     own AI picks the ranged auto-attacks (see the playerbots change in the README).
+#        Default:     0 - Disabled
+#                     1 - Enabled
+#
+
+RangedAutoAttack.Bots = 0
+
+#
+#    RangedAutoAttack.Interval
+#        Description: How often each player is checked, in milliseconds (minimum 100).
+#        Default:     250
+#
+
+RangedAutoAttack.Interval = 250
+
+#
+#    RangedAutoAttack.Spell.Wand
+#    RangedAutoAttack.Spell.Thrown
+#    RangedAutoAttack.Spell.Ranged
+#    RangedAutoAttack.Spell.Hunter
+#        Description: The auto-repeat spell used for each kind of weapon. "Ranged" is bows, guns and crossbows
+#                     for the classes other than hunters. When the player does not know the spell, any known
+#                     auto-repeat ranged spell that fits the weapon is used instead, so custom spells work too.
+#        Default:     5019  - Shoot (wands)
+#                     95001 - Auto Throw (retail_changes.sql)
+#                     95002 - Auto Shot for the other classes (retail_changes.sql)
+#                     75    - Auto Shot (hunters)
+#
+
+RangedAutoAttack.Spell.Wand = 5019
+RangedAutoAttack.Spell.Thrown = 95001
+RangedAutoAttack.Spell.Ranged = 95002
+RangedAutoAttack.Spell.Hunter = 75
