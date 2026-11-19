@@ -44,3 +44,5 @@ See `conf/mod-temucraft-ranged-autoattack.conf.dist`:
 
 - The client does not know about a ranged auto-attack the server started, so its action button doesn't light up. To stop it, select another target or clear your target. Starting it from the action bar works as normal.
 - **Playerbots:** the Temucraft playerbots branch makes bots pick the auto-repeat spell they know for their weapon (instead of the single Shoot / Throw), and lets them shoot while moving when `RangedAutoAttack.WhileMoving` is on. `RangedAutoAttack.Bots` stays off, so the module doesn't fight the bots' AI.
+
+Part of the Temucraft modules for AzerothCore 3.3.5a.
