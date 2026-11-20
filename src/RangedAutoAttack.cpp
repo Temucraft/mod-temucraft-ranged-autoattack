@@ -209,7 +209,8 @@ namespace
         if (!info || !victim->IsAlive() || !player->IsValidAttackTarget(victim))
             return;
 
-        if (player->isMoving() && !info->CanAutoRepeatWhileMoving())
+        // Moving only stops spells that still have the movement interrupt flag (section 32 clears it)
+        if (player->isMoving() && (info->InterruptFlags & SPELL_INTERRUPT_FLAG_MOVEMENT))
             return;
 
         if (!player->IsWithinCombatRange(victim, info->GetMaxRange(false, player)) || !player->IsWithinLOSInMap(victim))

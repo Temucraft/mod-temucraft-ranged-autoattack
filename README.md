@@ -14,7 +14,7 @@ The hunter's right-click Auto Shot, for every class and every ranged weapon.
    - clears the movement interrupt flag on 75, 5019, 95001 and 95002, so the client stops cancelling them when you move.
 
    Export them to the client DBCs with Anarres, like the other rows.
-2. **The core change** (Temucraft core, branch `retail-races`). It adds two worldserver.conf switches:
+2. Optional: **a core change** (not in the Temucraft core yet). The module builds and works without it. It would add two worldserver.conf switches:
 
    ```
    RangedAutoAttack.LikeAutoShot = 1   # every auto-repeat ranged spell pauses for casts/movement like Auto Shot, no 0.5 s first-shot delay
